@@ -1,7 +1,8 @@
 body{
   background:silver;
 }
-.target{
-  font-size: 35px;
+.target {
+  margin-top: 15px;
+  font-size: 18px;
   font-family: Inter,sans-serif;
 }

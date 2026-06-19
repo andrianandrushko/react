@@ -1,20 +1,12 @@
 import './App.css'
-import {coursesTitleArray} from "./data/coursesList.ts";
-
+import FamilyComponent from "./FamilyComponent/FamilyComponent.tsx";
 
 function App() {
-
-  return (
-      <>
-        <div className='target'>
-          {
-            coursesTitleArray.map((value) => (
-                <h2>{value}</h2>
-            ))
-          }
-        </div>
-      </>
-  );
+    return (
+        <>
+            <FamilyComponent />
+        </>
+    );
 }
 
-export default App
+export default App;
