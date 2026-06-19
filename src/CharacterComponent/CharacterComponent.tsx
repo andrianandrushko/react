@@ -8,7 +8,7 @@ type MyComponentPropType = {
     monthDuration: number
     children?: ReactNode }
 
-const MyComponent:FC<MyComponentPropType> = ({title,monthDuration,children}) => {
+const CharacterComponent:FC<MyComponentPropType> = ({title,monthDuration,children}) => {
     return (
         <div className='target'>
             <h2>{title} - {monthDuration}</h2>
@@ -17,4 +17,4 @@ const MyComponent:FC<MyComponentPropType> = ({title,monthDuration,children}) => 
     );
 };
 
-export default MyComponent;
+export default CharacterComponent;
