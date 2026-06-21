@@ -1,10 +1,10 @@
 import {useEffect, useState} from 'react';
-import type {UserComponent} from "../models/UserComponent.ts";
+import type {ProductComponent} from "../models/ProductComponent.ts";
 import {getUsers} from "../services/api.service.ts";
 
 
-const UserComponents = () => {
-    const [users,setUsers] = useState<UserComponent[]>([])
+const ProductComponents = () => {
+    const [users,setUsers] = useState<ProductComponent[]>([])
     useEffect(() => {
         getUsers()
             .then(response => {
@@ -14,9 +14,9 @@ const UserComponents = () => {
     return (
         <div>
             {
-                users.map(user => <div key={user.firstName}>item={user.id}</div>)
+                users.map(user => <div key={user.title}>item={user.id}</div>)
             }
         </div>
     )
 }
-export default UserComponents;
+export default ProductComponents;

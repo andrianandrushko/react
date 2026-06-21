@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import type { UserComponent } from "./models/UserComponent.ts";
+import type { ProductComponent } from "./models/ProductComponent.ts";
 import './App.css'
 
 const App = () => {
-    const [users, setUsers] = useState<UserComponent[]>([])
+    const [users, setUsers] = useState<ProductComponent[]>([])
     useEffect(() => {
-        fetch('https://dummyjson.com/users')
+        fetch('https://dummyjson.com/products')
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                setUsers(data.users)
+                setUsers(data.products)
             })
     }, [])
     return (
@@ -17,52 +17,49 @@ const App = () => {
             {
                 users.map((user) => (
                     <div key={user.id}  className={'cool'}>
-                        <h2>Id:{user.id} firstName:{user.firstName}</h2>
-                        <h3>maidenName:{user.maidenName} age:{user.age}</h3>
-                        <h4>gender:{user.gender} email:{user.email}</h4>
-                        <h5>phone:{user.phone} username:{user.username}</h5>
-                        <h6>password:{user.password} birthdate:{user.birthDate}</h6>
-                        <p>bloodGroup:{user.bloodGroup}</p>
-                        <p>height:{user.height}</p>
+                        <p>id:{user.id}</p>
+                        <p>title:{user.title}</p>
+                        <p>description:{user.description}</p>
+                        <p>category:{user.category}</p>
+                        <p>price:{user.price}</p>
+                        <p>discountPercentage:{user.discountPercentage}</p>
+                        <p>rating:{user.rating}</p>
+                        <p>stock:{user.stock}</p>
+                        <p>tags:{user.tags.join(', ')}</p>
+                        <p>brand:{user.brand}</p>
+                        <p>sku:{user.sku}</p>
                         <p>weight:{user.weight}</p>
-                        <p>eyeColor:{user.eyeColor}</p>
-                        <p>hair: {user.hair.color} {user.hair.type}</p>
-                        <p>ip:{user.ip}</p>
-                        <p>Address: {user.address.address}</p>
-                        <p>City: {user.address.city}</p>
-                        <p>State: {user.address.state}</p>
-                        <p>Postal Code: {user.address.postalCode}</p>
-                        <p>lat:{user.address.coordinates.lat}</p>
-                        <p>lng:{user.address.coordinates.lng}</p>
-                        <p>country:{user.address.country}</p>
-                        <p>macAddress:{user.macAddress}</p>
-                        <p>university:{user.university}</p>
-                        <p>CardExpire:{user.bank.cardExpire}</p>
-                        <p>CardNumber:{user.bank.cardNumber}</p>
-                        <p>CardType:{user.bank.cardType}</p>
-                        <p>Currency:{user.bank.currency}</p>
-                        <p>Iban:{user.bank.iban}</p>
-                        <p>department:{user.company.department}</p>
-                        <p>name:{user.company.name}</p>
-                        <p>title:{user.company.title}</p>
-                        <p>address:{user.address.address}</p>
-                        <p>city:{user.address.city}</p>
-                        <p>state:{user.address.state}</p>
-                        <p>stateCode:{user.address.stateCode}</p>
-                        <p>postalCode:{user.address.postalCode}</p>
-                        <p>lat:{user.address.coordinates.lat}</p>
-                        <p>lng:{user.address.coordinates.lng}</p>
-                        <p>ssn:{user.ssn}</p>
-                        <p>userAgent:{user.userAgent}</p>
-                        <p>coin:{user.crypto.coin}</p>
-                        <p>wallet:{user.crypto.wallet}</p>
-                        <p>network:{user.crypto.network}</p>
-                        <p>role:{user.role}</p>
-                    </div>))
+                        <p>width:{user.dimensions.width}</p>
+                        <p>height:{user.dimensions.height}</p>
+                        <p>depth:{user.dimensions.depth}</p>
+                        <p>warrantyInformation:{user.warrantyInformation}</p>
+                        <p>shippingInformation:{user.shippingInformation}</p>
+                        <p>availabilityStatus:{user.availabilityStatus}</p>
+                        <p>rating:{user.rating}</p>
+                        {user.reviews.map((review, index) => (
+                            <div key={index}>
+                                <p>rating:{review.rating}</p>
+                                <p>comment:{review.comment}</p>
+                                <p>date:{review.date}</p>
+                                <p>reviewerName:{review.reviewerName}</p>
+                                <p>reviewerEmail:{review.reviewerEmail}</p>
+                            </div>
+                        ))}
+                        <p>returnPolicy:{user.returnPolicy}</p>
+                        <p>minimumOrderQuantity:{user.minimumOrderQuantity}</p>
+                        <p>createdAt:{user.meta.createdAt}</p>
+                        <p>updatedAt:{user.meta.updatedAt}</p>
+                        <p>barcode:{user.meta.barcode}</p>
+                        <p>qrCode:{user.meta.qrCode}</p>
+                        <img src={user.images} alt="images" />
+                        <img src={user.thumbnail} alt="thumbnail" />
+                    </div>)
+                )
             }
         </>
     )
 }
+
 
 
 export default App;
