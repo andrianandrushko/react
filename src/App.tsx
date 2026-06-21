@@ -6,7 +6,7 @@ function App() {
         <>
             {
                 coursesArray.map((course) => (
-                    <div className='target'>
+                    <div key={course.title} className='target'>
                         <h2> title:{course.title}</h2>
                         <h3>monthDuration:{course.monthDuration}</h3>
                         <h4>hourDuration:{course.hourDuration}</h4>
