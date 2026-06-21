@@ -9,7 +9,7 @@ function App() {
         <div className='target'>
           {
             coursesTitleArray.map((value) => (
-                <h2>{value}</h2>
+                <h2 key={value}>{value}</h2>
             ))
           }
         </div>
