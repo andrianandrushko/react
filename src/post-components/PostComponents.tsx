@@ -1,10 +1,10 @@
 import {useEffect, useState} from 'react';
-import type { TodoComponent } from "./models/TodoComponent.ts";
-import {getUsers} from "./services/api.service.ts";
+import type {PostComponent} from "..//models/PostComponent.ts";
+import {getUsers} from "..//services/api.service.ts";
 
 
 const TodoComponents = () => {
-    const [users,setUsers] = useState<TodoComponent[]>([])
+    const [users,setUsers] = useState<PostComponent[]>([])
     useEffect(() => {
         getUsers()
             .then(response => {

@@ -5,7 +5,7 @@ import './App.css'
 const App = () => {
     const [users, setUsers] = useState<TodoComponent[]>([])
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/todos')
+        fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())
             .then(data => {
                 console.log(data)
@@ -20,7 +20,7 @@ const App = () => {
                         <h2>userId:{user.userId}</h2>
                         <h3>Id:{user.id}</h3>
                         <h4>title:{user.title}</h4>
-                        <h5>completed:{user.completed ? "true" : "false"}</h5>
+                        <h5>body:{user.body}</h5>
                     </div>))
 
             }
