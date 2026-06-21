@@ -5,7 +5,7 @@ function FamilyComponent() {
         <>
             {
                 simpsons.map((simpson) => (
-                    <div className='target'>
+                    <div key={simpson.name} className='target'>
                         <h2> Name:{simpson.name}</h2>
                         <h3>Surname:{simpson.surname}</h3>
                         <h4>Age:{simpson.age}</h4>
