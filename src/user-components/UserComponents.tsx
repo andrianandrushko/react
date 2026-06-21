@@ -1,10 +1,10 @@
 import {useEffect, useState} from 'react';
-import type {CommentComponent} from "../models/CommentComponent.ts";
+import type {UserComponent} from "../models/UserComponent.ts";
 import {getUsers} from "../services/api.service.ts";
 
 
-const TodoComponents = () => {
-    const [users,setUsers] = useState<CommentComponent[]>([])
+const UserComponents = () => {
+    const [users,setUsers] = useState<UserComponent[]>([])
     useEffect(() => {
         getUsers()
             .then(response => {
@@ -14,9 +14,9 @@ const TodoComponents = () => {
     return (
         <div>
             {
-                users.map(user => <div key={user.postId}>item={user.id}</div>)
+                users.map(user => <div key={user.firstName}>item={user.id}</div>)
             }
         </div>
     )
 }
-export default TodoComponents;
+export default UserComponents;

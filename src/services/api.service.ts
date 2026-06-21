@@ -1,8 +1,8 @@
-import type {CommentComponent} from "../models/CommentComponent.ts";
+import type {UserComponent} from "../models/UserComponent.ts";
 
-const baseurl = 'https://jsonplaceholder.typicode.com/comments'
+const baseurl = 'https://dummyjson.com/users'
 
-export const getUsers = async ():Promise<CommentComponent[]> =>{
+export const getUsers = async ():Promise<UserComponent[]> =>{
 
     return await fetch(baseurl)
         .then(value => value.json())
