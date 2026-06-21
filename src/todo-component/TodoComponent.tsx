@@ -1,0 +1,20 @@
+import type { TodoComponent as ITodo } from './models/TodoComponent.ts';
+
+interface Props {
+    todo: ITodo;
+}
+
+const TodoComponent = ({ todo }: Props) => {
+    return (
+        <div>
+            <h2>UserId: {todo.userId}</h2>
+            <h3>Id: {todo.id}</h3>
+            <h4>Title: {todo.title}</h4>
+            <h5>
+                Completed: {todo.completed ? "true" : "false"}
+            </h5>
+        </div>
+    );
+};
+
+export default TodoComponent;
