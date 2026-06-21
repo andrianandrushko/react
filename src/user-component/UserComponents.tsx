@@ -22,7 +22,7 @@ const UserComponent = ({ user }: Props) => {
             <p>Postal Code: {user.address.postalCode}</p>
             <p>lat:{user.address.coordinates.lat}</p>
             <p>lng:{user.address.coordinates.lng}</p>
-            <p>country:{user.country}</p>
+            <p>country:{user.address.country}</p>
             <p>macAddress:{user.macAddress}</p>
             <p>university:{user.university}</p>
             <p>CardExpire:{user.bank.cardExpire}</p>
@@ -33,14 +33,13 @@ const UserComponent = ({ user }: Props) => {
             <p>department:{user.company.department}</p>
             <p>name:{user.company.name}</p>
             <p>title:{user.company.title}</p>
-            <p>address:{user.address1.address}</p>
+            <p>address:{user.address.address}</p>
             <p>city:{user.address.city}</p>
             <p>state:{user.address.state}</p>
             <p>stateCode:{user.address.stateCode}</p>
             <p>postalCode:{user.address.postalCode}</p>
             <p>lat:{user.address.coordinates.lat}</p>
             <p>lng:{user.address.coordinates.lng}</p>
-            <p>eis:{user.eis}</p>
             <p>ssn:{user.ssn}</p>
             <p>userAgent:{user.userAgent}</p>
             <p>coin:{user.crypto.coin}</p>
