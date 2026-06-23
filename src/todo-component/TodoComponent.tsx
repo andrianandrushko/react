@@ -1,4 +1,4 @@
-import type { TodoComponent as ITodo } from './models/TodoComponent.ts';
+import type { TodoComponent as ITodo } from '../models/TodoComponent';
 
 interface Props {
     todo: ITodo;

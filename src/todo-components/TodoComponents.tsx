@@ -1,20 +1,21 @@
 import {useEffect, useState} from 'react';
-import type { TodoComponent } from "./models/TodoComponent.ts";
-import {getUsers} from "./services/api.service.ts";
+import type { TodoComponent } from "../models/TodoComponent.ts";
+import {getUsers} from "../services/api.service.ts";
+import './App.css'
 
 
 const TodoComponents = () => {
-    const [users,setUsers] = useState<TodoComponent[]>([])
+    const [todos,setTodos] = useState<TodoComponent[]>([])
     useEffect(() => {
         getUsers()
             .then(response => {
-                setUsers(response)
+                setTodos(response)
             })
     }, [])
     return (
         <div>
             {
-                users.map(user => <div key={user.userId}>item={user.id}</div>)
+                todos.map(todo => <div key={todo.userId}>item={todo.id}</div>)
             }
         </div>
     )
