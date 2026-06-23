@@ -1,4 +1,4 @@
-import {simpsons} from "../data/coursesList.ts";
+import {simpsons} from "../data/simpsonList.ts";
 
 function FamilyComponent() {
     return (

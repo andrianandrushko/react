@@ -1,6 +1,6 @@
-import type {ICourse} from "../models/ICourse.ts";
+import type {ISimp} from "../models/ISimp.ts";
 
-export const  simpsons:ICourse[] = [
+export const  simpsons:ISimp[] = [
     {
         name: 'Bart',
         surname: 'Simpson',

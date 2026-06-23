@@ -1,7 +1,5 @@
 import type {FC, ReactNode} from "react";
-import './myComponent.css'
-import './App.css'
-
+import '.App.css'
 
 type MyComponentPropType = {
     title: string;
