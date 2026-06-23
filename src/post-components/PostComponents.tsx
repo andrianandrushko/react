@@ -1,22 +1,22 @@
 import {useEffect, useState} from 'react';
-import type {PostComponent} from "..//models/PostComponent.ts";
+import type {IPost} from "../models/IPost.ts";
 import {getUsers} from "..//services/api.service.ts";
 
 
-const TodoComponents = () => {
-    const [users,setUsers] = useState<PostComponent[]>([])
+const PostComponents = () => {
+    const [posts,setPosts] = useState<IPost[]>([])
     useEffect(() => {
         getUsers()
             .then(response => {
-                setUsers(response)
+                setPosts(response)
             })
     }, [])
     return (
         <div>
             {
-                users.map(user => <div key={user.userId}>item={user.id}</div>)
+                posts.map(post => <div key={post.userId}>item={post.id}</div>)
             }
         </div>
     )
 }
-export default TodoComponents;
+export default PostComponents;

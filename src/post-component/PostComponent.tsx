@@ -1,10 +1,10 @@
-import type { PostComponent as IPost } from "..//models/PostComponent.ts";
+import type { IPost as IPost } from "../models/IPost.ts";
 
 interface Props {
     post: IPost;
 }
 
-const TodoComponent = ({ post }: Props) => {
+const PostComponent = ({ post }: Props) => {
     return (
         <div>
             <h2>UserId: {post.userId}</h2>
@@ -15,4 +15,4 @@ const TodoComponent = ({ post }: Props) => {
     );
 };
 
-export default TodoComponent;
+export default PostComponent;
