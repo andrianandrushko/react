@@ -1,5 +1,5 @@
 import type {FC, ReactNode} from "react";
-import './myComponent.css'
+import './components.css'
 import './App.css'
 
 
@@ -10,7 +10,7 @@ type MyComponentPropType = {
     modules: string
     children?: ReactNode }
 
-const MyComponent:FC<MyComponentPropType> = ({title,monthDuration,hourDuration,modules,children}) => {
+const Components:FC<MyComponentPropType> = ({title,monthDuration,hourDuration,modules,children}) => {
     return (
         <div className='target'>
             <h2>{title} - {monthDuration}</h2>
@@ -20,4 +20,4 @@ const MyComponent:FC<MyComponentPropType> = ({title,monthDuration,hourDuration,m
     );
 };
 
-export default MyComponent;
+export default Components;
