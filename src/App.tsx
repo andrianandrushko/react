@@ -1,5 +1,5 @@
 import './App.css'
-import {coursesTitleArray} from "./data/coursesList.ts";
+import {coursesAndDurationArray} from "./data/coursesList.ts";
 
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
       <>
         <div className='target'>
           {
-            coursesTitleArray.map((value) => (
-                <h2 key={value}>{value}</h2>
+              coursesAndDurationArray.map((value) => (
+                <h2 key={value.title}>{value.title}:{value.monthDuration}</h2>
             ))
           }
         </div>
