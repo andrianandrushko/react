@@ -1,7 +1,7 @@
 const CommentsPage = () => {
     return (
         <div>
-            CommentsPage
+            CommentsPage;
         </div>
     );
 };
