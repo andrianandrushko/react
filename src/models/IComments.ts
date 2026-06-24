@@ -45,7 +45,7 @@ export interface Crypto{
 
 
 
-export interface UserComponent {
+export interface IComments {
     id: number;
     firstName: string;
     lastName: string;

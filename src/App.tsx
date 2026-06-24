@@ -1,63 +1,63 @@
 import { useEffect, useState } from "react";
-import type { UserComponent } from "./models/UserComponent.ts";
+import type { IComments } from "./models/IComments.ts";
 import './App.css'
 
 const App = () => {
-    const [users, setUsers] = useState<UserComponent[]>([])
+    const [comments, setComments] = useState<IComments[]>([])
     useEffect(() => {
-        fetch('https://dummyjson.com/users')
+        fetch('')
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                setUsers(data.users)
+                setComments(data.comments)
             })
     }, [])
     return (
         <>
             {
-                users.map((user) => (
-                    <div key={user.id}  className={'cool'}>
-                        <h2>Id:{user.id} firstName:{user.firstName}</h2>
-                        <h3>maidenName:{user.maidenName} age:{user.age}</h3>
-                        <h4>gender:{user.gender} email:{user.email}</h4>
-                        <h5>phone:{user.phone} username:{user.username}</h5>
-                        <h6>password:{user.password} birthdate:{user.birthDate}</h6>
-                        <p>bloodGroup:{user.bloodGroup}</p>
-                        <p>height:{user.height}</p>
-                        <p>weight:{user.weight}</p>
-                        <p>eyeColor:{user.eyeColor}</p>
-                        <p>hair: {user.hair.color} {user.hair.type}</p>
-                        <p>ip:{user.ip}</p>
-                        <p>Address: {user.address.address}</p>
-                        <p>City: {user.address.city}</p>
-                        <p>State: {user.address.state}</p>
-                        <p>Postal Code: {user.address.postalCode}</p>
-                        <p>lat:{user.address.coordinates.lat}</p>
-                        <p>lng:{user.address.coordinates.lng}</p>
-                        <p>country:{user.address.country}</p>
-                        <p>macAddress:{user.macAddress}</p>
-                        <p>university:{user.university}</p>
-                        <p>CardExpire:{user.bank.cardExpire}</p>
-                        <p>CardNumber:{user.bank.cardNumber}</p>
-                        <p>CardType:{user.bank.cardType}</p>
-                        <p>Currency:{user.bank.currency}</p>
-                        <p>Iban:{user.bank.iban}</p>
-                        <p>department:{user.company.department}</p>
-                        <p>name:{user.company.name}</p>
-                        <p>title:{user.company.title}</p>
-                        <p>address:{user.address.address}</p>
-                        <p>city:{user.address.city}</p>
-                        <p>state:{user.address.state}</p>
-                        <p>stateCode:{user.address.stateCode}</p>
-                        <p>postalCode:{user.address.postalCode}</p>
-                        <p>lat:{user.address.coordinates.lat}</p>
-                        <p>lng:{user.address.coordinates.lng}</p>
-                        <p>ssn:{user.ssn}</p>
-                        <p>userAgent:{user.userAgent}</p>
-                        <p>coin:{user.crypto.coin}</p>
-                        <p>wallet:{user.crypto.wallet}</p>
-                        <p>network:{user.crypto.network}</p>
-                        <p>role:{user.role}</p>
+                comments.map((comment) => (
+                    <div key={comment.id}  className={'cool'}>
+                        <h2>Id:{comment.id} firstName:{comment.firstName}</h2>
+                        <h3>maidenName:{comment.maidenName} age:{comment.age}</h3>
+                        <h4>gender:{comment.gender} email:{comment.email}</h4>
+                        <h5>phone:{comment.phone} username:{comment.username}</h5>
+                        <h6>password:{comment.password} birthdate:{comment.birthDate}</h6>
+                        <p>bloodGroup:{comment.bloodGroup}</p>
+                        <p>height:{comment.height}</p>
+                        <p>weight:{comment.weight}</p>
+                        <p>eyeColor:{comment.eyeColor}</p>
+                        <p>hair: {comment.hair.color} {comment.hair.type}</p>
+                        <p>ip:{comment.ip}</p>
+                        <p>Address: {comment.address.address}</p>
+                        <p>City: {comment.address.city}</p>
+                        <p>State: {comment.address.state}</p>
+                        <p>Postal Code: {comment.address.postalCode}</p>
+                        <p>lat:{comment.address.coordinates.lat}</p>
+                        <p>lng:{comment.address.coordinates.lng}</p>
+                        <p>country:{comment.address.country}</p>
+                        <p>macAddress:{comment.macAddress}</p>
+                        <p>university:{comment.university}</p>
+                        <p>CardExpire:{comment.bank.cardExpire}</p>
+                        <p>CardNumber:{comment.bank.cardNumber}</p>
+                        <p>CardType:{comment.bank.cardType}</p>
+                        <p>Currency:{comment.bank.currency}</p>
+                        <p>Iban:{comment.bank.iban}</p>
+                        <p>department:{comment.company.department}</p>
+                        <p>name:{comment.company.name}</p>
+                        <p>title:{comment.company.title}</p>
+                        <p>address:{comment.address.address}</p>
+                        <p>city:{comment.address.city}</p>
+                        <p>state:{comment.address.state}</p>
+                        <p>stateCode:{comment.address.stateCode}</p>
+                        <p>postalCode:{comment.address.postalCode}</p>
+                        <p>lat:{comment.address.coordinates.lat}</p>
+                        <p>lng:{comment.address.coordinates.lng}</p>
+                        <p>ssn:{comment.ssn}</p>
+                        <p>userAgent:{comment.userAgent}</p>
+                        <p>coin:{comment.crypto.coin}</p>
+                        <p>wallet:{comment.crypto.wallet}</p>
+                        <p>network:{comment.crypto.network}</p>
+                        <p>role:{comment.role}</p>
                     </div>))
             }
         </>
