@@ -5,11 +5,11 @@ import './App.css'
 const App = () => {
     const [comments, setComments] = useState<IComments[]>([])
     useEffect(() => {
-        fetch('')
+        fetch('https://jsonplaceholder.typicode.com/comments')
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                setComments(data.comments)
+                setComments(data)
             })
     }, [])
     return (
@@ -17,47 +17,11 @@ const App = () => {
             {
                 comments.map((comment) => (
                     <div key={comment.id}  className={'cool'}>
-                        <h2>Id:{comment.id} firstName:{comment.firstName}</h2>
-                        <h3>maidenName:{comment.maidenName} age:{comment.age}</h3>
-                        <h4>gender:{comment.gender} email:{comment.email}</h4>
-                        <h5>phone:{comment.phone} username:{comment.username}</h5>
-                        <h6>password:{comment.password} birthdate:{comment.birthDate}</h6>
-                        <p>bloodGroup:{comment.bloodGroup}</p>
-                        <p>height:{comment.height}</p>
-                        <p>weight:{comment.weight}</p>
-                        <p>eyeColor:{comment.eyeColor}</p>
-                        <p>hair: {comment.hair.color} {comment.hair.type}</p>
-                        <p>ip:{comment.ip}</p>
-                        <p>Address: {comment.address.address}</p>
-                        <p>City: {comment.address.city}</p>
-                        <p>State: {comment.address.state}</p>
-                        <p>Postal Code: {comment.address.postalCode}</p>
-                        <p>lat:{comment.address.coordinates.lat}</p>
-                        <p>lng:{comment.address.coordinates.lng}</p>
-                        <p>country:{comment.address.country}</p>
-                        <p>macAddress:{comment.macAddress}</p>
-                        <p>university:{comment.university}</p>
-                        <p>CardExpire:{comment.bank.cardExpire}</p>
-                        <p>CardNumber:{comment.bank.cardNumber}</p>
-                        <p>CardType:{comment.bank.cardType}</p>
-                        <p>Currency:{comment.bank.currency}</p>
-                        <p>Iban:{comment.bank.iban}</p>
-                        <p>department:{comment.company.department}</p>
-                        <p>name:{comment.company.name}</p>
-                        <p>title:{comment.company.title}</p>
-                        <p>address:{comment.address.address}</p>
-                        <p>city:{comment.address.city}</p>
-                        <p>state:{comment.address.state}</p>
-                        <p>stateCode:{comment.address.stateCode}</p>
-                        <p>postalCode:{comment.address.postalCode}</p>
-                        <p>lat:{comment.address.coordinates.lat}</p>
-                        <p>lng:{comment.address.coordinates.lng}</p>
-                        <p>ssn:{comment.ssn}</p>
-                        <p>userAgent:{comment.userAgent}</p>
-                        <p>coin:{comment.crypto.coin}</p>
-                        <p>wallet:{comment.crypto.wallet}</p>
-                        <p>network:{comment.crypto.network}</p>
-                        <p>role:{comment.role}</p>
+                        <h2>posId:{comment.postId}</h2>
+                        <h3>id:{comment.id}</h3>
+                        <h4>name:{comment.name}</h4>
+                        <h5>email:{comment.email}</h5>
+                        <h6>body:{comment.body}</h6>
                     </div>))
             }
         </>
