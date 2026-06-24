@@ -1,29 +1,29 @@
 import { useEffect, useState } from "react";
-import type {IPosts} from "./models/IPosts.ts";
+import type {IComments} from "./models/IComments.ts";
 import './App.css'
 
 const App = () => {
-    const [posts, setPosts] = useState<IPosts[]>([])
+    const [comments, setComments] = useState<IComments[]>([])
     useEffect(() => {
-        fetch('https://dummyjson.com/posts')
+        fetch('https://dummyjson.com/comments')
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                setPosts(data.posts)
+                setComments(data.comments)
             })
     }, [])
     return (
         <>
             {
-                posts.map((post) => (
-                    <div key={post.id}  className={'cool'}>
-                        <p>id:{post.id}</p>
-                        <p>title:{post.title}</p>
-                        <p>body:{post.body}</p>
-                        <p>tags:{post.tags}</p>
-                        <p>likes:{post.reactions.likes}</p>
-                        <p>dislikes:{post.reactions.dislikes}</p>
-                        <p>views:{post.views}</p>
+                comments.map((comment) => (
+                    <div key={comment.id}  className={'cool'}>
+                        <p>id:{comment.id}</p>
+                        <p>body:{comment.body}</p>
+                        <p>postId:{comment.postId}</p>
+                        <p>likes:{comment.likes}</p>
+                        <p>id:{comment.user.id}</p>
+                        <p>username:{comment.user.username}</p>
+                        <p>fullName:{comment.user.fullName}</p>
                     </div>)
                 )
             }

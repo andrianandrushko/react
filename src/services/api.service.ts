@@ -1,12 +1,12 @@
-import type {IPosts} from "../models/IPosts.ts";
+import type {IComments} from "../models/IComments.ts";
 
-const baseUrl = 'https://dummyjson.com/posts';
+const baseUrl = 'https://dummyjson.com/comments';
 
-export const getPosts = async (): Promise<IPosts[]> => {
+export const getComments = async (): Promise<IComments[]> => {
 
     const response = await fetch(baseUrl);
 
     const data = await response.json();
 
-    return data.posts;
+    return data.comments;
 };
