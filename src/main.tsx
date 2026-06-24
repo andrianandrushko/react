@@ -4,18 +4,21 @@ import Layout from "./Layout/Layout.tsx";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import UsersPage from "./Pages/UsersPage.tsx";
 import JsonPlaceholderPage from "./Pages/JsonPlaceholderPage.tsx";
+import DummyJsonPage from "./Pages/DummyJsonPage.tsx";
 
 
 
- const rounter = createBrowserRouter([
+const router = createBrowserRouter([
      {
          path:'/', element:<Layout/>, children:[
              {path:'users', element:<UsersPage/>, children:[
-                     {path:'JsonPlaceholder',element:<JsonPlaceholderPage />},
+                     {path:'JsonPlaceholder', element:<JsonPlaceholderPage />},
+                     {path:'DummyJson', element:<DummyJsonPage/>}
                  ]},
+
          ]}
 
  ])
 createRoot(document.getElementById('root')!)
-    .render(<RouterProvider router={rounter}/>)
+    .render(<RouterProvider router={router}/>)
 
