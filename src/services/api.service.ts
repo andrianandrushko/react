@@ -1,8 +1,8 @@
-import type {IUsers} from "../models/IUsers.ts";
+import type {ITodos} from "../models/ITodos.ts";
 
-const baseurl = 'https://dummyjson.com/users'
+const baseurl = 'https://dummyjson.com/todos'
 
-export const getUsers = async ():Promise<IUsers[]> =>{
+export const getUsers = async ():Promise<ITodos[]> =>{
 
     return await fetch(baseurl)
         .then(value => value.json())
