@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import type { ProductComponent } from "./models/ProductComponent.ts";
+import type {IUsers} from "./models/IUsers.ts";
 import './App.css'
 
 const App = () => {
-    const [users, setUsers] = useState<ProductComponent[]>([])
+    const [users, setUsers] = useState<IUsers[]>([])
     useEffect(() => {
-        fetch('https://dummyjson.com/products')
+        fetch('https://dummyjson.com/users')
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                setUsers(data.products)
+                setUsers(data.users)
             })
     }, [])
     return (
@@ -17,42 +17,50 @@ const App = () => {
             {
                 users.map((user) => (
                     <div key={user.id}  className={'cool'}>
-                        <p>id:{user.id}</p>
-                        <p>title:{user.title}</p>
-                        <p>description:{user.description}</p>
-                        <p>category:{user.category}</p>
-                        <p>price:{user.price}</p>
-                        <p>discountPercentage:{user.discountPercentage}</p>
-                        <p>rating:{user.rating}</p>
-                        <p>stock:{user.stock}</p>
-                        <p>tags:{user.tags.join(', ')}</p>
-                        <p>brand:{user.brand}</p>
-                        <p>sku:{user.sku}</p>
+                       <p>id:{user.id}</p>
+                       <p>firstName:{user.firstName}</p>
+                       <p>lastName:{user.lastName}</p>
+                        <p>maidenName:{user.maidenName}</p>
+                        <p>age:{user.age}</p>
+                        <p>gender:{user.gender}</p>
+                        <p>email:{user.email}</p>
+                        <p>phone:{user.phone}</p>
+                        <p>username:{user.username}</p>
+                        <p>password:{user.password}</p>
+                        <p>birthDate:{user.birthDate}</p>
+                        <p>image:{user.image}</p>
+                        <p>bloodGroup:{user.bloodGroup}</p>
+                        <p>height:{user.height}</p>
                         <p>weight:{user.weight}</p>
-                        <p>width:{user.dimensions.width}</p>
-                        <p>height:{user.dimensions.height}</p>
-                        <p>depth:{user.dimensions.depth}</p>
-                        <p>warrantyInformation:{user.warrantyInformation}</p>
-                        <p>shippingInformation:{user.shippingInformation}</p>
-                        <p>availabilityStatus:{user.availabilityStatus}</p>
-                        <p>rating:{user.rating}</p>
-                        {user.reviews.map((review, index) => (
-                            <div key={index}>
-                                <p>rating:{review.rating}</p>
-                                <p>comment:{review.comment}</p>
-                                <p>date:{review.date}</p>
-                                <p>reviewerName:{review.reviewerName}</p>
-                                <p>reviewerEmail:{review.reviewerEmail}</p>
-                            </div>
-                        ))}
-                        <p>returnPolicy:{user.returnPolicy}</p>
-                        <p>minimumOrderQuantity:{user.minimumOrderQuantity}</p>
-                        <p>createdAt:{user.meta.createdAt}</p>
-                        <p>updatedAt:{user.meta.updatedAt}</p>
-                        <p>barcode:{user.meta.barcode}</p>
-                        <p>qrCode:{user.meta.qrCode}</p>
-                        <img src={user.images} alt="images" />
-                        <img src={user.thumbnail} alt="thumbnail" />
+                        <p>eyeColor:{user.eyeColor}</p>
+                        <p>color:{user.hair.color}</p>
+                        <p>type:{user.hair.type}</p>
+                        <p>ip:{user.ip}</p>
+                        <p>address:{user.address.address}</p>
+                        <p>city:{user.address.city}</p>
+                        <p>state:{user.address.state}</p>
+                        <p>stateCode:{user.address.stateCode}</p>
+                        <p>postalCode:{user.address.postalCode}</p>
+                        <p>lat:{user.address.coordinates.lat}</p>
+                        <p>lng:{user.address.coordinates.lng}</p>
+                        <p>country:{user.address.country}</p>
+                        <p>macAddress:{user.macAddress}</p>
+                        <p>university:{user.university}</p>
+                        <p>cardExpire:{user.bank.cardExpire}</p>
+                        <p>cardNumber:{user.bank.cardNumber}</p>
+                        <p>cardType:{user.bank.cardType}</p>
+                        <p>currency:{user.bank.currency}</p>
+                        <p>iban:{user.bank.iban}</p>
+                        <p>department:{user.company.department}</p>
+                        <p>name:{user.company.name}</p>
+                        <p>title:{user.company.title}</p>
+                        <p>ein:{user.ein}</p>
+                        <p>ssn:{user.ssn}</p>
+                        <p>userAgent:{user.userAgent}</p>
+                        <p>coin:{user.crypto.coin}</p>
+                        <p>wallet:{user.crypto.wallet}</p>
+                        <p>network:{user.crypto.network}</p>
+                        <p>role:{user.role}</p>
                     </div>)
                 )
             }
