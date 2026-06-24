@@ -1,10 +1,12 @@
-import type {IUsers} from "../models/IUsers.ts";
+import type {IPosts} from "../models/IPosts.ts";
 
-const baseurl = 'https://dummyjson.com/users'
+const baseUrl = 'https://dummyjson.com/posts';
 
-export const getUsers = async ():Promise<IUsers[]> =>{
+export const getPosts = async (): Promise<IPosts[]> => {
 
-    return await fetch(baseurl)
-        .then(value => value.json())
+    const response = await fetch(baseUrl);
 
-}
+    const data = await response.json();
+
+    return data.posts;
+};

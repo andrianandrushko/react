@@ -1,66 +1,29 @@
 import { useEffect, useState } from "react";
-import type {IUsers} from "./models/IUsers.ts";
+import type {IPosts} from "./models/IPosts.ts";
 import './App.css'
 
 const App = () => {
-    const [users, setUsers] = useState<IUsers[]>([])
+    const [posts, setPosts] = useState<IPosts[]>([])
     useEffect(() => {
-        fetch('https://dummyjson.com/users')
+        fetch('https://dummyjson.com/posts')
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                setUsers(data.users)
+                setPosts(data.posts)
             })
     }, [])
     return (
         <>
             {
-                users.map((user) => (
-                    <div key={user.id}  className={'cool'}>
-                       <p>id:{user.id}</p>
-                       <p>firstName:{user.firstName}</p>
-                       <p>lastName:{user.lastName}</p>
-                        <p>maidenName:{user.maidenName}</p>
-                        <p>age:{user.age}</p>
-                        <p>gender:{user.gender}</p>
-                        <p>email:{user.email}</p>
-                        <p>phone:{user.phone}</p>
-                        <p>username:{user.username}</p>
-                        <p>password:{user.password}</p>
-                        <p>birthDate:{user.birthDate}</p>
-                        <p>image:{user.image}</p>
-                        <p>bloodGroup:{user.bloodGroup}</p>
-                        <p>height:{user.height}</p>
-                        <p>weight:{user.weight}</p>
-                        <p>eyeColor:{user.eyeColor}</p>
-                        <p>color:{user.hair.color}</p>
-                        <p>type:{user.hair.type}</p>
-                        <p>ip:{user.ip}</p>
-                        <p>address:{user.address.address}</p>
-                        <p>city:{user.address.city}</p>
-                        <p>state:{user.address.state}</p>
-                        <p>stateCode:{user.address.stateCode}</p>
-                        <p>postalCode:{user.address.postalCode}</p>
-                        <p>lat:{user.address.coordinates.lat}</p>
-                        <p>lng:{user.address.coordinates.lng}</p>
-                        <p>country:{user.address.country}</p>
-                        <p>macAddress:{user.macAddress}</p>
-                        <p>university:{user.university}</p>
-                        <p>cardExpire:{user.bank.cardExpire}</p>
-                        <p>cardNumber:{user.bank.cardNumber}</p>
-                        <p>cardType:{user.bank.cardType}</p>
-                        <p>currency:{user.bank.currency}</p>
-                        <p>iban:{user.bank.iban}</p>
-                        <p>department:{user.company.department}</p>
-                        <p>name:{user.company.name}</p>
-                        <p>title:{user.company.title}</p>
-                        <p>ein:{user.ein}</p>
-                        <p>ssn:{user.ssn}</p>
-                        <p>userAgent:{user.userAgent}</p>
-                        <p>coin:{user.crypto.coin}</p>
-                        <p>wallet:{user.crypto.wallet}</p>
-                        <p>network:{user.crypto.network}</p>
-                        <p>role:{user.role}</p>
+                posts.map((post) => (
+                    <div key={post.id}  className={'cool'}>
+                        <p>id:{post.id}</p>
+                        <p>title:{post.title}</p>
+                        <p>body:{post.body}</p>
+                        <p>tags:{post.tags}</p>
+                        <p>likes:{post.reactions.likes}</p>
+                        <p>dislikes:{post.reactions.dislikes}</p>
+                        <p>views:{post.views}</p>
                     </div>)
                 )
             }
