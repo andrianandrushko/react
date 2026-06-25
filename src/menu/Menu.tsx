@@ -9,13 +9,21 @@ const Menu = () => {
 
                 <li><Link to={'users'}>Users:</Link></li>
 
-                <li><Link to='/users/jsonplaceholder'> JSONPlaceholder</Link></li>
+                <li><Link to='/users/jsonplaceholder'>JSONPlaceholder</Link></li>
 
                 <li><Link to='/users/dummyjson'>DummyJson</Link></li>
 
                 <li><Link to={'posts'}>Posts:</Link></li>
 
-                <li><Link to={'/posts/jsonplaceholder'}> JSONPlaceholder</Link></li>
+                <li><Link to={'/posts/jsonplaceholder'}>JSONPlaceholder</Link></li>
+
+                <li><Link to={'/posts/dummyjson'}>DummyJson</Link></li>
+
+                <li><Link to={'comments'}>Comments:</Link></li>
+
+                <li><Link to={'/comments/jsonplaceholder'}>JSONPlaceholder</Link></li>
+
+                <li><Link to={'/comments/dummyjson'}>DummyJson</Link></li>
             </ul>
         </div>
     );
