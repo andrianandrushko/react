@@ -5,6 +5,8 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import UsersPage from "./Pages/UsersPage.tsx";
 import JsonPlaceholderPage from "./Pages/JsonPlaceholderPage.tsx";
 import DummyJsonPage from "./Pages/DummyJsonPage.tsx";
+import JsonPlaceholderPostsPage from "./Pages/JsonPlaceholderPostsPage.tsx";
+import PostsPage from "./Pages/PostsPage.tsx";
 
 
 
@@ -14,6 +16,9 @@ const router = createBrowserRouter([
              {path:'users', element:<UsersPage/>, children:[
                      {path:'JsonPlaceholder', element:<JsonPlaceholderPage />},
                      {path:'DummyJson', element:<DummyJsonPage/>}
+                 ]},
+             {path:'posts', element:<PostsPage/>,children:[
+                     {path:'JsonPlaceholder', element:<JsonPlaceholderPostsPage/>},
                  ]},
 
          ]}

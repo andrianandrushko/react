@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Menu.css'
+
 const Menu = () => {
     return (
         <div className={'menu'}>
@@ -11,6 +12,10 @@ const Menu = () => {
                 <li><Link to='/users/jsonplaceholder'> JSONPlaceholder</Link></li>
 
                 <li><Link to='/users/dummyjson'>DummyJson</Link></li>
+
+                <li><Link to={'posts'}>Posts:</Link></li>
+
+                <li><Link to={'/posts/jsonplaceholder'}> JSONPlaceholder</Link></li>
             </ul>
         </div>
     );
