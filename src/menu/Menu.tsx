@@ -8,13 +8,6 @@ const Menu = () => {
                 <li><Link to={'/'}>Home</Link></li>
 
                 <li><Link to={'users'}>Users:</Link></li>
-
-                <li><Link to='/users/dummyjson'>DummyJson</Link></li>
-
-                <li><Link to={'posts'}>Posts:</Link></li>
-
-                <li><Link to='/posts/dummyjson'>DummyJson</Link></li>
-
             </ul>
         </div>
     );

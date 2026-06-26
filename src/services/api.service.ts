@@ -1,25 +1,21 @@
 import type {IUsers} from "../models/IUsers.ts";
-import type {IPosts} from '../models/IPosts.ts';
+import type {ICarts} from "../models/ICarts.ts";
 
-
-
-const usersUrl = 'https://dummyjson.com/users?limit=30';
-
-const postsUrl = 'https://dummyjson.com/posts?limit=30';
+const usersUrl = 'https://dummyjson.com/users';
+const baseUrl = 'https://dummyjson.com/carts/user';
 
 export const getUsers = async ():Promise<IUsers[]> =>{
     const response = await fetch(usersUrl)
     const data = await response.json()
 
     return data.users;
-
 }
 
-export const getPosts = async (): Promise<IPosts[]> =>{
-    const response = await fetch(postsUrl);
+export const getUserCarts = async (id:number):Promise<ICarts[]> =>{
+    const response = await fetch(`${baseUrl}/${id}`);
     const data = await response.json();
 
-    return data.posts;
+    return data.carts;
 }
 
 

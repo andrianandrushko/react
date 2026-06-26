@@ -1,20 +1,28 @@
-import {Outlet} from "react-router-dom";
 import type {IUsers} from "../models/IUsers.ts";
 import {useEffect, useState} from "react";
 import {getUsers} from "../services/api.service.ts";
+import {Outlet} from "react-router-dom";
+import {useNavigate} from "react-router";
+
 
 const UsersPage = () => {
-    const [users, setUsers] = useState<IUsers[]>([]);
-    useEffect(()=>{
+    const [users, setUsers] = useState<IUsers[]>([])
+    const navigate = useNavigate();
+    useEffect(() => {
         getUsers()
-        .then(response =>{
-            setUsers(response);
-        })
+            .then(response => {
+                setUsers(response);
+            })
     },[])
     return (
-        <div>
+         <div style={{display:'flex', gap:'30px'}}>
             {
                 users.map(user => <div key={user.id}>
+                    <div className={'user-list'}>
+                        <button onClick={() => navigate(`/users/${user.id}`)}>
+                            Show carts
+                        </button>
+                        <Outlet/>
                     <p>id:{user.id}</p>
                     <p>firstName:{user.firstName}</p>
                     <p>lastName:{user.lastName}</p>
@@ -59,9 +67,9 @@ const UsersPage = () => {
                     <p>wallet:{user.crypto.wallet}</p>
                     <p>network:{user.crypto.network}</p>
                     <p>role:{user.role}</p>
+                    </div>
                 </div>)
             }
-            <Outlet/>
         </div>
     );
 };

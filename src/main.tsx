@@ -3,16 +3,17 @@ import './index.css'
 import Layout from "./Layout/Layout.tsx";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import UsersPage from "./Pages/UsersPage.tsx";
-import PostsPage from "./Pages/PostsPage.tsx";
-
+import UsersCartsPage from "./Pages/UsersCartsPage.tsx";
+import './App.css';
 
 
 const router = createBrowserRouter([
      {
          path:'/', element:<Layout/>, children:[
-             {path:'/users/dummyjson', element:<UsersPage/>},
-             {path:'/posts/dummyjson', element:<PostsPage/>}
-         ]}
+             {path:'users', element:<UsersPage/>, children:[
+                     {path:':id', element:<UsersCartsPage/>}
+                 ]},
+         ]},
 
  ])
 createRoot(document.getElementById('root')!)
