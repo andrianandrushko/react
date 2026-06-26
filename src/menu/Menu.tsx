@@ -11,6 +11,10 @@ const Menu = () => {
 
                 <li><Link to='/users/dummyjson'>DummyJson</Link></li>
 
+                <li><Link to={'posts'}>Posts:</Link></li>
+
+                <li><Link to='/posts/dummyjson'>DummyJson</Link></li>
+
             </ul>
         </div>
     );
