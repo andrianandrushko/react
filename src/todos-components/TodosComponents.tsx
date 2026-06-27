@@ -1,11 +1,11 @@
 import {useEffect, useState} from "react";
-import {getUsers} from "../services/api.service.ts";
+import {getTodos} from "../services/api.service.ts";
 import type {ITodos} from "../models/ITodos.ts";
 
 const TodosComponents = () => {
     const [todos,setTodos] = useState<ITodos[]>([])
     useEffect(() => {
-        getUsers()
+        getTodos()
             .then(response => {
                 setTodos(response)
             })
