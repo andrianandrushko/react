@@ -18,7 +18,7 @@ const UsersPage = () => {
          <div style={{display:'flex', gap:'30px'}}>
             {
                 users.map(user => <div key={user.id}>
-                        <button className={'block'} onClick={() => navigate(`/users/${user.id}`)}>
+                        <button className={'block'} onClick={() => navigate(`/users/${user.id}/carts`)}>
                             Show carts
                         </button>
                         <Outlet/>

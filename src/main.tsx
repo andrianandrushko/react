@@ -10,12 +10,10 @@ import './App.css';
 const router = createBrowserRouter([
      {
          path:'/', element:<Layout/>, children:[
-             {path:'users', element:<UsersPage/>, children:[
-                     {path:':id', element:<UsersCartsPage/>}
+             {path:'users', element:<UsersPage/>},
+             {path:'/users/:id/carts', element:<UsersCartsPage/>}
                  ]},
-         ]},
-
- ])
+ ]);
 createRoot(document.getElementById('root')!)
     .render(<RouterProvider router={router}/>)
 
