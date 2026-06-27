@@ -1,9 +1,9 @@
-import type {IUsers} from "../models/IUsers.ts";
-import type {IUser} from "../models/IUser.dummy.ts";
-import type {IPosts} from '../models/IPosts.ts';
-import type {IPostDummy} from "../models/IPost.dummy.ts";
-import type {IComments} from "../models/IComments.ts";
-import type {ICommentsDummy} from "../models/IComments.dummy.ts";
+import type {IUsers} from "../Users-models/IUsers.ts";
+import type {IUser} from "../Users-models/IUser.dummy.ts";
+import type {IPosts} from '../Posts-models/IPosts.ts';
+import type {IPostDummy} from "../Posts-models/IPost.dummy.ts";
+import type {IComments} from "../Comments-models/IComments.ts";
+import type {ICommentsDummy} from "../Comments-models/IComments.dummy.ts";
 
 const baseUrl = 'https://jsonplaceholder.typicode.com/users';
 

@@ -1,4 +1,4 @@
-import type {IPostDummy} from "../models/IPost.dummy.ts";
+import type {IPostDummy} from "../Posts-models/IPost.dummy.ts";
 import {getPost} from "../services/api.service.ts";
 import {useEffect, useState} from "react";
 

@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {getPosts} from "../services/api.service.ts";
-import type {IPosts} from '../models/IPosts.ts';
+import type {IPosts} from '../Posts-models/IPosts.ts';
 
 
 const JsonPlaceholderPostsPage = () => {

@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import type {ICommentsDummy} from "../models/IComments.dummy.ts";
+import type {ICommentsDummy} from "../Comments-models/IComments.dummy.ts";
 import {getComment} from "../services/api.service.ts";
 
 const DummyJsonCommentsPage = () => {

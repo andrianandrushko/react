@@ -1,13 +1,13 @@
 import {useEffect, useState} from "react";
-import type {IComments} from "../models/IComments.ts";
+import type {IComments} from "../Comments-models/IComments.ts";
 import {getComments} from "../services/api.service.ts";
 
 const JsonPlaceholderCommentsPage = () => {
-    const [comments, setPosts] = useState<IComments[]>([])
+    const [comments, setComments] = useState<IComments[]>([])
     useEffect(() =>{
         getComments()
             .then(response => {
-                setPosts(response)
+                setComments(response)
             })
     },[])
     return (
