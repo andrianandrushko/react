@@ -1,4 +1,4 @@
-import {useSearchParams} from "react-router";
+import { useSearchParams } from "react-router-dom";
 
 
 
@@ -12,7 +12,7 @@ const PaginationComponent = () => {
                         const pg = query.get('pg')
                         if(pg){
                             let currentPage = +pg
-                            setQuery({pg: (++currentPage).toString()})
+                            setQuery({pg: (currentPage +1).toString()})
                         }
                     }}>next
                     </button>
@@ -20,10 +20,9 @@ const PaginationComponent = () => {
                     const pg = query.get('pg')
                     if(pg){
                     let currentPage = +pg
-                    setQuery({pg: (--currentPage).toString()})
+                    setQuery({pg: (currentPage -1).toString()})
                 }
                 }}>prev</button>
-
                 </div>
 
     );
