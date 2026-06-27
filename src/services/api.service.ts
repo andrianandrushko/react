@@ -1,5 +1,5 @@
-import type {IUsers} from "../models/IUsers.ts";
-import type {ICarts} from "../models/ICarts.ts";
+import type {IUsers} from "../Users-models/IUsers.ts";
+import type {ICarts} from "../Carts-models/ICarts.ts";
 
 const usersUrl = 'https://dummyjson.com/users';
 const baseUrl = 'https://dummyjson.com/carts/user';
