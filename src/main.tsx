@@ -2,15 +2,15 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Layout from "./Layout/Layout.tsx";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import UsersPage from "./Pages/UsersPage.tsx";
-import JsonPlaceholderPage from "./Pages/JsonPlaceholderPage.tsx";
-import DummyJsonPage from "./Pages/DummyJsonPage.tsx";
-import JsonPlaceholderPostsPage from "./Pages/JsonPlaceholderPostsPage.tsx";
-import PostsPage from "./Pages/PostsPage.tsx";
-import DummyJsonPostsPage from "./Pages/DummyJsonPostsPage.tsx";
-import CommentsPage from "./Pages/CommentsPage.tsx";
-import JsonPlaceholderCommentsPage from "./Pages/JsonPlaceholderCommentsPage.tsx";
-import DummyJsonCommentsPage from "./Pages/DummyJsonCommentsPage.tsx";
+import UsersPage from "./Users-Pages/UsersPage.tsx";
+import JsonPlaceholderPage from "./Users-Pages/JsonPlaceholderPage.tsx";
+import DummyJsonPage from "./Users-Pages/DummyJsonPage.tsx";
+import JsonPlaceholderPostsPage from "./Posts-Pages/JsonPlaceholderPostsPage.tsx";
+import PostsPage from "./Posts-Pages/PostsPage.tsx";
+import DummyJsonPostsPage from "./Posts-Pages/DummyJsonPostsPage.tsx";
+import CommentsPage from "./Comments-Pages/CommentsPage.tsx";
+import JsonPlaceholderCommentsPage from "./Comments-Pages/JsonPlaceholderCommentsPage.tsx";
+import DummyJsonCommentsPage from "./Comments-Pages/DummyJsonCommentsPage.tsx";
 
 
 
