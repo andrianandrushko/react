@@ -1,17 +1,17 @@
-.block{
-  position: relative;
-  left: 10vh;
-  top: 20px;
+.clock{
+  width: 70px;
+  margin-left: 5vh;
+  margin-top: 40vh;
+  border: 1px solid black;
+  margin-right: 10px;
+  border-radius: 7px;
+  background-color: black;
   color: white;
-  background-color: blue;
-  border-radius: 5px;
-  width: 7vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid blue;
 }
-.row{
-  margin-top: 2vh;
-  margin-left: 10vh;
+.but{
+  border: 1px solid black;
+  border-radius: 7px;
+  background-color: black;
+  color: white;
+  width: 70px;
 }
