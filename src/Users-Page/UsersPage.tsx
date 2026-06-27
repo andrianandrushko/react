@@ -1,5 +1,5 @@
 import {Outlet} from "react-router-dom";
-import type {IUsers} from "../models/IUsers.ts";
+import type {IUsers} from "../Users-models/IUsers.ts";
 import {useEffect, useState} from "react";
 import {getUsers} from "../services/api.service.ts";
 

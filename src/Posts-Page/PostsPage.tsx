@@ -1,6 +1,6 @@
 import {Outlet} from "react-router-dom";
 import {useEffect, useState} from "react";
-import type {IPosts} from "../models/IPosts.ts";
+import type {IPosts} from "../Posts-models/IPosts.ts";
 import {getPosts} from "../services/api.service.ts";
 
 const PostsPage = () => {

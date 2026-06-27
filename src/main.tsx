@@ -2,8 +2,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Layout from "./Layout/Layout.tsx";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import UsersPage from "./Pages/UsersPage.tsx";
-import PostsPage from "./Pages/PostsPage.tsx";
+import UsersPage from "./Users-Page/UsersPage.tsx";
+import PostsPage from "./Posts-Page/PostsPage.tsx";
 
 
 

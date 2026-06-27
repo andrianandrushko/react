@@ -7,13 +7,9 @@ const Menu = () => {
             <ul>
                 <li><Link to={'/'}>Home</Link></li>
 
-                <li><Link to={'users'}>Users:</Link></li>
+                <li><Link to='/users/dummyjson'>Users-DummyJson</Link></li>
 
-                <li><Link to='/users/dummyjson'>DummyJson</Link></li>
-
-                <li><Link to={'posts'}>Posts:</Link></li>
-
-                <li><Link to='/posts/dummyjson'>DummyJson</Link></li>
+                <li><Link to='/posts/dummyjson'>Posts-DummyJson</Link></li>
 
             </ul>
         </div>
