@@ -1,12 +1,12 @@
 import {useEffect, useState} from 'react';
 import type {IPost} from "../models/IPost.ts";
-import {getUsers} from "..//services/api.service.ts";
+import {getPosts} from "..//services/api.service.ts";
 
 
 const PostComponents = () => {
     const [posts,setPosts] = useState<IPost[]>([])
     useEffect(() => {
-        getUsers()
+        getPosts()
             .then(response => {
                 setPosts(response)
             })
