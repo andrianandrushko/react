@@ -18,8 +18,7 @@ const UsersPage = () => {
          <div style={{display:'flex', gap:'30px'}}>
             {
                 users.map(user => <div key={user.id}>
-                    <div className={'user-list'}>
-                        <button onClick={() => navigate(`/users/${user.id}`)}>
+                        <button className={'block'} onClick={() => navigate(`/users/${user.id}`)}>
                             Show carts
                         </button>
                         <Outlet/>
@@ -67,7 +66,6 @@ const UsersPage = () => {
                     <p>wallet:{user.crypto.wallet}</p>
                     <p>network:{user.crypto.network}</p>
                     <p>role:{user.role}</p>
-                    </div>
                 </div>)
             }
         </div>

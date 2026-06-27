@@ -21,9 +21,11 @@ const UsersCartsPage = () => {
             {
                 carts.map(cart => (
                     <div key={cart.id}>
+                        <div className="row">
                         <p>id: {cart.id}</p>
                         <p>Total: {cart.total}</p>
                         <p>Total products: {cart.totalProducts}</p>
+                        </div>
                     </div>
                 ))
             }

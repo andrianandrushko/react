@@ -1,4 +1,6 @@
-button{
+.block{
+  position: relative;
+  left: 10vh;
   top: 20px;
   color: white;
   background-color: blue;
@@ -9,6 +11,7 @@ button{
   align-items: center;
   border: 1px solid blue;
 }
-.block{
-  text-align: -webkit-center;
+.row{
+  margin-top: 2vh;
+  margin-left: 10vh;
 }
