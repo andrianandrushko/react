@@ -6,10 +6,15 @@ const UsersPage = () => {
     cosnt [users, setUsers] = useState<IUsers[]>([])
     useEffect(() => {
         getUsers()
-
+            .then(response => {
+                setUsers(response);
+            })
     })
     return (
         <div>
+            {
+                users.map(user => <div></div>)
+            }
 
         </div>
     );
