@@ -3,6 +3,7 @@ import type {IUsers} from "../models/IUsers.ts";
 import {getUsers} from "../services/api.service.ts";
 import {useSearchParams} from "react-router-dom";
 import PaginationComponent from "../pagination/PaginationComponent.tsx";
+import UsersComponent from "../component/UsersComponent.tsx";
 
 const UsersPage = () => {
     const [users, setUsers] = useState<IUsers[]>([])
@@ -18,9 +19,7 @@ const UsersPage = () => {
     return (
         <div>
             {
-                users.map(user => <div key={user.id}>
-                    <p>{user.firstName}</p>
-                </div>)
+                users.map(user => <UsersComponent item={user}/>)
             }
             <PaginationComponent />
         </div>
