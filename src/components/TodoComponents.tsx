@@ -3,7 +3,6 @@ import type {ITodos} from "../models/ITodos.ts";
 import {getTodos} from "../services/api.service.ts";
 
 
-
 const TodoComponents = () => {
     const [todos, setTodos] = useState<ITodos[]>([])
     useEffect(() => {
