@@ -1,5 +1,4 @@
 import type {FC, ReactNode} from "react";
-import './components.css'
 import './App.css'
 
 
