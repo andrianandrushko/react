@@ -14,7 +14,7 @@ const DummyJsonPostsPage = () => {
     return (
         <div>
             {
-                posts.map(post => <div key={post.id}>
+                posts.map((post, index) => <div key={index}>
                     <p>id:{post.id}</p>
                     <p>title:{post.title}</p>
                     <p>body:{post.body}</p>

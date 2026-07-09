@@ -13,7 +13,7 @@ const JsonPlaceholderCommentsPage = () => {
     return (
         <div>
             {
-                comments.map(comment => <div key={comment.id}>
+                comments.map((comment, index) => <div key={index}>
                     <p>postId:{comment.postId}</p>
                     <p>id:{comment.id}</p>
                     <p>name:{comment.name}</p>

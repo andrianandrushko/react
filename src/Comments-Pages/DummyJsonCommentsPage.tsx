@@ -14,7 +14,7 @@ const DummyJsonCommentsPage = () => {
     return (
         <div>
             {
-                comment.map(comment => <div key={comment.id}>
+                comment.map((comment, index) => <div key={index}>
                     <p>id:{comment.id}</p>
                     <p>body:{comment.body}</p>
                     <p>postId:{comment.postId}</p>

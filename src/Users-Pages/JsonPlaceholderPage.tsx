@@ -14,7 +14,7 @@ const JsonPlaceholderPage = () => {
     return (
         <div>
             {
-                users.map(user => <div key={user.id}>
+                users.map((user, index) => <div key={index}>
                     <p>id:{user.id}</p>
                     <p>name:{user.name}</p>
                     <p>username:{user.username}</p>
