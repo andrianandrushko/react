@@ -16,7 +16,7 @@ const PostsPage = () => {
     return (
         <div>
             {
-                posts.map(post => <div key={post.id}>
+                posts.map((post, index) => <div key={index}>
                 <p>userId:{post.userId}</p>
                 <p>id:{post.id}</p>
                 <p>title:{post.title}</p>

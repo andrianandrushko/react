@@ -14,7 +14,7 @@ const UsersPage = () => {
     return (
         <div>
             {
-                users.map(user => <div key={user.id}>
+                users.map((user, index) => <div key={index}>
                     <p>id:{user.id}</p>
                     <p>firstName:{user.firstName}</p>
                     <p>lastName:{user.lastName}</p>
