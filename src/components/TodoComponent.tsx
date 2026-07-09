@@ -4,7 +4,7 @@ interface Props {
     todo: ITodos;
 }
 
-const ProductComponent = ({ todo }: Props) => {
+const TodoComponent = ({ todo }: Props) => {
     return (
         <div>
             <p>id:{todo.id}</p>
@@ -17,4 +17,4 @@ const ProductComponent = ({ todo }: Props) => {
 
 
 
-export default ProductComponent;
+export default TodoComponent;
