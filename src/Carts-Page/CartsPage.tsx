@@ -19,8 +19,8 @@ const CartsPage = () => {
     return (
         <div>
             {
-                carts.map(cart => (
-                    <div key={cart.id}>
+                carts.map((cart, index) => (
+                    <div key={index}>
                         <div className="row">
                         <p>id: {cart.id}</p>
                         <p>Total: {cart.total}</p>

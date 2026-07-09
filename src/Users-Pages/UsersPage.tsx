@@ -1,7 +1,6 @@
 import type {IUsers} from "../Users-models/IUsers.ts";
 import {useEffect, useState} from "react";
-import {getUsers} from "../services/api.service.ts";
-import {Outlet} from "react-router-dom";
+import {getUsers} from "../services/api.service.ts"
 import {useNavigate} from "react-router";
 
 
@@ -17,11 +16,10 @@ const UsersPage = () => {
     return (
          <div style={{display:'flex', gap:'30px'}}>
             {
-                users.map(user => <div key={user.id}>
+                users.map((user, index) => <div key={index}>
                         <button className={'block'} onClick={() => navigate(`/users/${user.id}/carts`)}>
                             Show carts
                         </button>
-                        <Outlet/>
                     <p>id:{user.id}</p>
                     <p>firstName:{user.firstName}</p>
                     <p>lastName:{user.lastName}</p>
