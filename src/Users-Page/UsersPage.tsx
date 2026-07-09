@@ -16,12 +16,12 @@ const UsersPage = () => {
     },[])
     return (
          <div style={{display:'flex', gap:'30px'}}>
+             <Outlet/>
             {
                 users.map(user => <div key={user.id}>
                         <button className={'block'} onClick={() => navigate(`/users/${user.id}`)}>
                             Show carts
                         </button>
-                        <Outlet/>
                     <p>id:{user.id}</p>
                     <p>firstName:{user.firstName}</p>
                     <p>lastName:{user.lastName}</p>
