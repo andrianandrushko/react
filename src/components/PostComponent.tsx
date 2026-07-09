@@ -11,7 +11,8 @@ const ProductComponent = ({ post }: Props) => {
             <p>title:{post.title}</p>
             <p>body:{post.body}</p>
             <p>tags:{post.tags}</p>
-            <p>reactions:{post.reactions}</p>
+            <p>likes:{post.reactions.likes}</p>
+            <p>dislikes:{post.reactions.dislikes}</p>
             <p>views:{post.views}</p>
         </div>
     );
