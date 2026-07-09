@@ -10,7 +10,7 @@ type MyComponentPropType = {
     modules: string
     children?: ReactNode }
 
-const Components:FC<MyComponentPropType> = ({title,monthDuration,hourDuration,modules,children}) => {
+const CourseComponent:FC<MyComponentPropType> = ({title,monthDuration,hourDuration,modules,children}) => {
     return (
         <div className='target'>
             <h2>{title} - {monthDuration}</h2>
@@ -20,4 +20,4 @@ const Components:FC<MyComponentPropType> = ({title,monthDuration,hourDuration,mo
     );
 };
 
-export default Components;
+export default CourseComponent;
