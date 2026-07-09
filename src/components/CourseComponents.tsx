@@ -11,6 +11,7 @@ const CourseComponents = () => {
                             <h3>monthDuration:{course.monthDuration}</h3>
                             <h4>hourDuration:{course.hourDuration}</h4>
                             <ul>
+                                modules:
                                 {course.modules.map((module) => (
                                     <li key={module}>{module}</li>
                                 ))}

@@ -1,12 +1,12 @@
 import './App.css'
-import CourseComponent from "./components/CourseComponent.tsx";
+import CourseComponents from "./components/CourseComponents.tsx";
 
 
 function App() {
     return (
         <>
             {
-               <CourseComponent/>
+               <CourseComponents/>
             }
         </>
     );

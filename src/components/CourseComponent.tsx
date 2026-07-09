@@ -1,5 +1,4 @@
 import type {FC, ReactNode} from "react";
-import './App.css'
 
 
 type MyComponentPropType = {
