@@ -18,6 +18,7 @@ const CourseComponents = () => {
                             </ul>
                         </div>))
                 }
+
             </div>
         </>
     );
