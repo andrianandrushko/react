@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {getCars} from "../services/api.service.ts";
 import type {ICars} from "../models/ICars.ts";
+import CarsComponent from "./CarsComponent.tsx";
 
 const CarsComponents = () => {
     const [cars, setCars] = useState<ICars[]>([])
@@ -14,13 +15,9 @@ const CarsComponents = () => {
     return (
         <>
             {
-                cars.map((car, index) => (
-                    <div key={index} className='boo'>
-                        <p>id:{car.id}</p>
-                        <p>brand:{car.brand}</p>
-                        <p>price:{car.price}</p>
-                        <p>year:{car.year}</p>
-                    </div>))
+                cars.map((car) => (
+                    <CarsComponent key={car.id} car={car} />
+                ))
             }
             </>
     );

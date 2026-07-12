@@ -6,11 +6,11 @@ interface IProps{
 }
 const CarsComponent = ({car}:IProps) => {
     return (
-        <div>
+        <div className="cars">
             <p>id:{car.id}</p>
-            <p>id:{car.brand}</p>
-            <p>id:{car.price}</p>
-            <p>id:{car.year}</p>
+            <p>brand:{car.brand}</p>
+            <p>price:{car.price}</p>
+            <p>year:{car.year}</p>
         </div>
     );
 };
