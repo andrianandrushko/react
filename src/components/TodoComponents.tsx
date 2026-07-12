@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { getTodos } from "../services/api.service.ts";
-import type {TodoComponent} from "../models/TodoComponent.ts";
+import TodoComponent from "./TodoComponent.tsx";
+import type {ITodo} from "../models/TodoComponent.ts";
 
 
 const TodoComponents = () => {
-    const [todos, setTodos] = useState<TodoComponent[]>([]);
+    const [todos, setTodos] = useState<ITodo[]>([]);
     useEffect(() => {
         getTodos()
             .then((data) => {
@@ -14,16 +15,20 @@ const TodoComponents = () => {
 
     return (
         <div>
-            {todos.map((todo, index ) => (
-                <div key={index} className="cool">
-                    <h2>userId: {todo.userId}</h2>
-                    <h3>Id: {todo.id}</h3>
-                    <h4>Title: {todo.title}</h4>
-                    <h5>Completed: {todo.completed ? "true" : "false"}</h5>
-                </div>
+            {todos.map((todo ) => (
+               <TodoComponent key={todo.id} todo={todo}/>
             ))}
         </div>
     );
 };
 
 export default TodoComponents;
+
+
+
+
+
+
+
+
+

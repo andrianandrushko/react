@@ -1,4 +1,4 @@
-import type { TodoComponent as ITodo } from '../models/TodoComponent';
+import type { ITodo } from '../models/TodoComponent';
 
 interface Props {
     todo: ITodo;
@@ -6,14 +6,12 @@ interface Props {
 
 const TodoComponent = ({ todo }: Props) => {
     return (
-        <div>
-            <h2>UserId: {todo.userId}</h2>
-            <h3>Id: {todo.id}</h3>
-            <h4>Title: {todo.title}</h4>
-            <h5>
-                Completed: {todo.completed ? "true" : "false"}
-            </h5>
-        </div>
+            <div key={todo.id} className="cool">
+                <h2>userId: {todo.userId}</h2>
+                <h3>Id: {todo.id}</h3>
+                <h4>Title: {todo.title}</h4>
+                <h5>Completed: {todo.completed ? "true" : "false"}</h5>
+            </div>
     );
 };
 
