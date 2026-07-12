@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {getUserCarts} from "../services/api.service.ts";
-import type {ICarts} from "../Carts-models/ICarts.ts";
+import type {ICarts} from "../models/ICarts.ts";
 
 
 const CartsPage = () => {
