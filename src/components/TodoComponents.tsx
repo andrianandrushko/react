@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import type {ITodos} from "../models/ITodos.ts";
 import {getTodos} from "../services/api.service.ts";
+import TodoComponent from "./TodoComponent.tsx";
 
 
 const TodoComponents = () => {
@@ -14,15 +15,9 @@ const TodoComponents = () => {
     return (
         <>
             {
-                todos.map((todo, index) => (
-                    <div key={index}  className={'cool'}>
-                        <p>id:{todo.id}</p>
-                        <p>todo:{todo.todo}</p>
-                        <p>completed:{todo.completed ? "true" : "false"}</p>
-                        <p>userId:{todo.userId}</p>
-                    </div>)
-                )
-            }
+                todos.map((todo) => (
+                   <TodoComponent key={todo.id} todo={todo}/>
+                    ))}
         </>
     )
 }
