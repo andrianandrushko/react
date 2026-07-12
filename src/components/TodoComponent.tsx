@@ -6,7 +6,7 @@ interface Props {
 
 const TodoComponent = ({ todo }: Props) => {
     return (
-            <div key={todo.id} className="cool">
+            <div className="cool">
                 <h2>userId: {todo.userId}</h2>
                 <h3>Id: {todo.id}</h3>
                 <h4>Title: {todo.title}</h4>
