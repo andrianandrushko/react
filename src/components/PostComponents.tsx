@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import type {IPost} from "../models/IPost.ts";
 import {getPosts} from "../services/api.service.ts";
+import PostComponent from "./PostComponent.tsx";
 
 const PostComponents = () => {
     const [posts, setPosts] = useState<IPost[]>([])
@@ -13,13 +14,9 @@ const PostComponents = () => {
     return (
         <>
             {
-                posts.map((post, index) => (
-                    <div key={index} className={'cool'}>
-                        <h2>userId:{post.userId}</h2>
-                        <h3>Id:{post.id}</h3>
-                        <h4>title:{post.title}</h4>
-                        <h5>body:{post.body}</h5>
-                    </div>))
+                posts.map((post) => (
+                    <PostComponent key={post.id} post={post} />
+                    ))
 
             }
         </>
