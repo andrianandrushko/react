@@ -1,12 +1,14 @@
-import PaginationComponent from "./pagination/PaginationComponent.tsx";
 import './App.css';
-import UsersPage from "./Pages/UsersPage.tsx";
+import CarsComponents from "./components/CarsComponents.tsx";
+import FormPage from "./Pages/FormPage.tsx";
+
+
 
 const App = () => {
     return (
         <div>
-            <UsersPage />
-            <PaginationComponent />
+            <CarsComponents/>
+            <FormPage/>
         </div>
     );
 };

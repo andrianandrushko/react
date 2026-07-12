@@ -1,17 +1,59 @@
-.clock{
-  width: 70px;
-  margin-left: 5vh;
-  margin-top: 2vh;
-  border: 1px solid black;
-  margin-right: 10px;
-  border-radius: 7px;
-  background-color: black;
-  color: white;
+.boo{
+  display: flex;
+  position: relative;
+  gap: 10px;
+  margin-top: 10px;
 }
-.but{
+.button{
+  margin-left: 10px;
+  width: 80px;
+  height: 30px;
+  margin-top: 10px;
   border: 1px solid black;
-  border-radius: 7px;
-  background-color: black;
+  border-radius: 5px;
   color: white;
-  width: 70px;
+  background-color: blueviolet;
+}
+.id{
+  margin-right: 5px;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.brand{
+  margin-right: 5px;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.price{
+  margin-right: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.year{
+  margin-right: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.label-brand{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 15px;
+}
+.label-price{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 15px;
+}
+.label-year{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: 15px;
 }

@@ -1,16 +1,17 @@
-import type {IUsers} from "../models/IUsers.ts";
+import type {ICars} from "../models/ICars.ts";
+import axios from "axios";
 
-const usersUrl = 'https://dummyjson.com/users';
+const carsUrl = "http://bigbird.space/carsAPI/v1/cars";
 
 
-export const getUsers = async (pg:string):Promise<IUsers[]> =>{
-    const limit = 10;
-    const skip = (+pg - 1) * limit;
+export const getCars = async () => {
+    const response = await axios.get<ICars[]>(carsUrl);
+    return response.data;
+};
 
-    const response = await fetch(`${usersUrl}?limit=${limit}&skip=${skip}`);
-    const data = await response.json()
-
-    return data.users;
+export const CreateCar = async (car: ICars): Promise<ICars> => {
+    const response = await axios.post<ICars>(carsUrl,car)
+    return response.data
 }
 
 
