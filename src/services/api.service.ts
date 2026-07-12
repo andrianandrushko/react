@@ -1,5 +1,5 @@
-import type {IUsers} from "../Users-models/IUsers.ts";
-import type {IPosts} from '../Posts-models/IPosts.ts';
+import type {IUsers} from "../models/IUsers.ts";
+import type {IPosts} from '../models/IPosts.ts';
 
 
 
