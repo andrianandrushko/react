@@ -6,7 +6,7 @@ interface Props {
 
 const CommentComponent = ({ comment }: Props) => {
     return (
-            <div key={comment.id}  className={'cool'}>
+            <div className={'cool'}>
                 <h2>posId:{comment.postId}</h2>
                 <h3>id:{comment.id}</h3>
                 <h4>name:{comment.name}</h4>
