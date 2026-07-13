@@ -50,6 +50,7 @@ const FormComponent = () => {
                 <label className={'label-id'}>
                     id:
                     <input
+                        className='id'
                         type="number"
                         name={'id'}
                         min={1}
