@@ -3,8 +3,8 @@ import "./Menu.css";
 
 const Menu = () => {
     return (
+        // список посилань на сторінки
         <div className="menu">
-            // список посилань на сторінки
             <ul>
                 <li><Link to="/">Home</Link></li>
 

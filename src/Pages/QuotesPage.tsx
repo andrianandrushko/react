@@ -16,7 +16,7 @@ const QuotesPage = () => {
     }, []);
     return (
         <div>
-
+            Quotes Page
         </div>
     );
 };
