@@ -1,71 +1,44 @@
-import {type FormEvent, useState} from "react";
-import { CreateCar } from "../services/api.service.ts";
+import {useForm} from "react-hook-form";
+import {joiResolver} from "@hookform/resolvers/joi";
+import FormValidators from "../validators/Form.Validators.tsx";
+import {CreateCar} from "../services/api.service.ts";
 
 
 
 interface IFormProps{
-    id: number;
     brand: string,
     price: number,
     year: number,
 }
 const FormComponent = () => {
-    const [formState, setFormState] = useState<IFormProps>({
-        id:0,
-        brand:'',
-        price:0,
-        year:0
-    })
+   const {handleSubmit, register, formState:{errors, isValid}} = useForm<IFormProps>({
+       mode:'all',
+       resolver: joiResolver(FormValidators)
+   });
 
+   const customHandler = (forDataProps:IFormProps) => {
+       console.log(forDataProps)
+   }
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        const user = {
-            id: formState.id,
-            brand: formState.brand,
-            price: formState.price,
-            year: formState.year
-        }
-        console.log(user)
-
-        CreateCar(formState)
-            .then((car)=>{
-                console.log('Створенна машина', car)
-            })
-            .catch((error)=>{
-                console.log('Помилка створення машини', error)
-            })
-    };
-
-
-    const handleInputChange = (e:FormEvent<HTMLInputElement>) => {
-        const input = e.target as HTMLInputElement;
-        console.log(input.name)
-        setFormState({...formState, [input.name]: input.value})
-    };
-
+   const customCar = (data:IFormProps) => {
+       CreateCar(data)
+           .then((car)=>{
+               console.log('Створенна машина', car)
+           })
+           .catch((error)=>{
+               console.log('Помилка створення машини', error)
+           })
+   }
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <label className={'label-id'}>
-                    id:
-                    <input
-                        className='id'
-                        type="number"
-                        name={'id'}
-                        min={1}
-                        max={100}
-                        value={formState.id}
-                        onChange={handleInputChange}/>
-                </label>
+            <form onSubmit={handleSubmit(customHandler)}>
                 <label className='label-brand'>
                     brand:
                     <input
                         className='brand'
                         type="text"
-                        name={'brand'}
-                        value={formState.brand}
-                        onChange={handleInputChange}/>
+                        {...register("brand")} />
+                        {errors.brand && <div>{errors.brand.message}</div>}
                 </label>
 
                 <label className='label-price'>
@@ -73,11 +46,11 @@ const FormComponent = () => {
                     <input
                         className='price'
                         type="number"
-                        name={"price"}
                         min={1000}
                         max={200000}
-                        value={formState.price}
-                        onChange={handleInputChange}/>
+                        {...register("price")}
+                    />
+                    {errors.price && <div>{errors.price.message}</div>}
                 </label>
 
                 <label className='label-year'>
@@ -85,14 +58,13 @@ const FormComponent = () => {
                     <input
                         className='year'
                         type="number"
-                        name={'year'}
                         min={2000}
                         max={2026}
-                        value={formState.year}
-                        onChange={handleInputChange}/>
+                        {...register("year")} />
+                        {errors.year && <div>{errors.year.message}</div>}
                 </label>
 
-                <button className='button' type='submit'>create car</button>
+                <button className='button' type='submit' disabled={!isValid}>create car</button>
             </form>
         </div>
     );
