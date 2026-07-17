@@ -19,7 +19,7 @@ const UsersPage = () => {
     return (
         <div>
             {
-                users.map(user => <UsersComponent item={user}/>)
+                users.map(user => <UsersComponent key={user.id} item={user}/>)
             }
             <PaginationComponent />
         </div>
