@@ -4,7 +4,7 @@ const FormValidators = Joi.object({
     brand: Joi.string().min(3).required().messages({
         'string.pattern.base': 'Brand must be a string with at least 2 characters'
     }),
-    price: Joi.number().min(1000).max(200000).required().messages({
+    price: Joi.number().min(10000).max(200000).required().messages({
         'number.min': 'Price must be at least 10000',
         'number.max': 'Price must be at most 200000'
     }),
