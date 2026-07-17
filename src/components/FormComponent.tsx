@@ -21,8 +21,8 @@ const FormComponent = () => {
    }
 
 
-   const customCar = (data:IFormProps) => {
-       CreateCar(data)
+   const customCar = (formProps:IFormProps) => {
+       CreateCar(formProps)
            .then((car)=>{
                console.log('Створенна машина', car)
            })
