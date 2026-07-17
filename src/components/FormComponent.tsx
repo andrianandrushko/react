@@ -2,6 +2,9 @@ import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import FormValidators from "../validators/Form.Validators.tsx";
 import {CreateCar} from "../services/api.service.ts";
+import {data} from "react-router";
+
+
 
 
 
@@ -18,7 +21,9 @@ const FormComponent = () => {
 
    const customHandler = (forDataProps:IFormProps) => {
        console.log(forDataProps)
+       customCar(forDataProps)
    }
+
 
    const customCar = (data:IFormProps) => {
        CreateCar(data)
