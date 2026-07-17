@@ -4,10 +4,6 @@ import FormValidators from "../validators/Form.Validators.tsx";
 import {CreateCar} from "../services/api.service.ts";
 
 
-
-
-
-
 interface IFormProps{
     brand: string,
     price: number,
