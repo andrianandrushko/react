@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Child from "./memo/Child.tsx";
 import UseMemo from "./useMemo/UseMemo.tsx";
 import UseCallback from "./useCallback/UseCallback.tsx";
+import Memo from "./memo/Memo.tsx";
 
 // робимо функцію App
 function App() {
@@ -24,7 +24,7 @@ function App() {
                 {count}
             </button>
 
-            <Child name='max' />
+            <Memo name='max' />
             <UseMemo/>
             <UseCallback/>
         </>
