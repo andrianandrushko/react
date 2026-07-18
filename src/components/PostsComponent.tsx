@@ -1,5 +1,6 @@
 import type {IPosts} from "../IPosts.ts";
 
+
 interface Props{
     post:IPosts
 }

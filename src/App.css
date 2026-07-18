@@ -1,3 +1,5 @@
-.post{
-  margin-bottom: 90px;
+.posts{
+  margin-bottom: 10vh;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
