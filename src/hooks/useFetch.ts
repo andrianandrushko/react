@@ -8,6 +8,6 @@ export const useFetch = <T,>(url:string) => {
             .then(res => res.json())
             .then(data =>
                 setPosts(data))
-    },[])
+    },[url])
     return posts;
 }
