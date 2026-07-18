@@ -2,6 +2,7 @@ import { useState } from "react";
 import UseMemo from "./useMemo/UseMemo.tsx";
 import UseCallback from "./useCallback/UseCallback.tsx";
 import Memo from "./memo/Memo.tsx";
+import'./App.css'
 
 // робимо функцію App
 function App() {
@@ -20,13 +21,22 @@ function App() {
 
         // також почататкове ім'я max
         <>
+            <div className='hook-Memo'>
+                Memo:
             <button onClick={() => setCount(prev => prev + 1)}>
                 {count}
             </button>
+                <Memo name='max' />
+            </div>
+            <div className='hook-UseMemo'>
+                UseMemo:
+                <UseMemo />
+            </div>
+            <div className='hook-UseCallback'>
+                UseCallback:
+                <UseCallback/>
+            </div>
 
-            <Memo name='max' />
-            <UseMemo/>
-            <UseCallback/>
         </>
     );
 }

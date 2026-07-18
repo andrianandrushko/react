@@ -3,3 +3,16 @@
   width: 30px;
   margin-right: 10px;
 }
+.hook-Memo{
+  font-size: 2vh;
+  margin-top: 10vh;
+}
+
+.hook-UseMemo{
+  font-size: 2vh;
+  margin-left: 20vh;
+  margin-bottom: 20vh;
+}
+.hook-UseCallback{
+  font-size: 2vh;
+}
