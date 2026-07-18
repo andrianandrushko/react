@@ -1,6 +1,7 @@
 import {useFetch} from "./hooks/useFetch.ts";
 import type {IPosts} from "./IPosts.ts";
 import './App.css'
+import PostsComponent from "./components/PostsComponent.tsx";
 
 
 function App  () {
@@ -12,12 +13,7 @@ function App  () {
         <div>
             {
                 posts.map((post) => (
-                    <div className='post' key={post.id}>
-                        <p>userId:{post.userId}</p>
-                        <p>id:{post.id}</p>
-                        <p>title:{post.title}</p>
-                        <p>body:{post.body}</p>
-                    </div>
+                    <PostsComponent key={post.id} post={post}/>
                 ))
             }
         </div>
