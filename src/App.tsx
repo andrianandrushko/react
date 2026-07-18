@@ -2,9 +2,11 @@ import {useFetch} from "./hooks/useFetch.ts";
 import type {IPosts} from "./IPosts.ts";
 import './App.css'
 
+
 function App  () {
 
     const posts = useFetch<IPosts>('https://jsonplaceholder.typicode.com/posts')
+    console.log(posts)
 
     return (
         <div>
