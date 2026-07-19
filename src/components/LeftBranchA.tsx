@@ -6,7 +6,7 @@ const LeftBranchA = () => {
     return (
         <div>
                 LeftBranchA
-            current the numbers of the switches {counter}
+            current the numbers of the switches: {counter}
         </div>
     );
 };

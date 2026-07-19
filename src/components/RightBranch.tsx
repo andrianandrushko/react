@@ -2,7 +2,7 @@ import RightBranchA from "./RightBranchA.tsx";
 
 const RightBranch = () => {
     return (
-        <div>
+        <div className= "RightBranch">
             RightBranch
             <RightBranchA/>
         </div>

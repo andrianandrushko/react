@@ -1,8 +1,14 @@
 .light{
-  background: white;
+  background: #BFBFBF;
   color: black;
 }
 .dark{
   background: black;
   color: white;
+}
+.LeftBranch{
+  font-size: 20px;
+}
+.RightBranch{
+  font-size: 20px;
 }

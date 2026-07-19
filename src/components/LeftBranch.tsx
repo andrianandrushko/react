@@ -2,7 +2,7 @@ import LeftBranchA from "./LeftBranchA.tsx";
 
 const LeftBranch = () => {
     return (
-        <div>
+        <div className= "LeftBranch">
             LeftBranch
            <LeftBranchA/>
         </div>
