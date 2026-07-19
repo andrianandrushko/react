@@ -6,7 +6,7 @@ import PostsComponent from "./components/PostsComponent.tsx";
 
 function App  () {
 
-    const posts = useFetch<IPosts>('https://jsonplaceholder.typicode.com/posts')
+    const posts = useFetch<IPosts[]>('https://jsonplaceholder.typicode.com/posts')
     console.log(posts)
 
     return (
