@@ -6,7 +6,7 @@ import './App.css'
 
 const App = () => {
     const [counter, setCounter] = useState(0);
-    const [darkTheme, LightTheme] = useState('light');
+    const [darkTheme, LightTheme] = useState('dark');
     return (
         <div className={darkTheme}>
             <MyContext.Provider value={
