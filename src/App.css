@@ -1,10 +1,12 @@
 .light{
-  background: #BFBFBF;
+  background: #ECEAEA;
   color: black;
+  height: 8vh;
 }
 .dark{
   background: black;
   color: white;
+  height: 8vh;
 }
 .LeftBranch{
   font-size: 20px;
