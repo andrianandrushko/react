@@ -10,7 +10,7 @@ type MyContextType = {
 export const MyContext = createContext<MyContextType>({
     counter: 0,
     increment: (obj:number) => {
-    console.log(obj)
+    console.log(obj);
     },
     darkTheme: 'dark',
     LightTheme: () => {}
