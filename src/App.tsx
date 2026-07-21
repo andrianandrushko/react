@@ -15,7 +15,6 @@ const App = () => {
                  counter: counter,
                  increment: (obj) => {
                  setCounter(++obj)
-                 console.log(obj)
             }
             }}>
             <LeftBranch/>

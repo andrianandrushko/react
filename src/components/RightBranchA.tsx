@@ -11,7 +11,6 @@ const RightBranchA = () => {
             <button onClick={() =>{
                 increment(counter)
                 LightTheme(darkTheme === 'dark' ? 'light' : 'dark')
-                console.log(darkTheme)
 
             }}>Змінити тему</button>
         </div>
