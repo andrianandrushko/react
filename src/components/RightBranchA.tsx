@@ -3,8 +3,7 @@ import {MyContext} from "../context/MyContext.tsx";
 
 
 const RightBranchA = () => {
-  const {darkTheme, LightTheme} = useContext(MyContext)
-  const {counter, increment} = useContext(MyContext)
+  const {darkTheme, LightTheme, counter, increment} = useContext(MyContext)
     return (
         <div>
             RightBranchA
