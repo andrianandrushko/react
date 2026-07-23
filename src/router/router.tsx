@@ -2,7 +2,7 @@ import {createBrowserRouter} from "react-router";
 import MainLayout from "../Layout/MainLayout.tsx";
 import PostsPage from "../Pages/PostsPage.tsx";
 import CommentsPage from "../Pages/CommentsPage.tsx";
-import Complex from "../Pages/Complex.tsx";
+import ComplexPage from "../Pages/ComplexPage.tsx";
 import UsersPage from "../Pages/UsersPage.tsx";
 
 export const router = createBrowserRouter([
@@ -11,7 +11,7 @@ export const router = createBrowserRouter([
             {path:'users', element:<UsersPage/>},
             {path:'posts', element:<PostsPage/>},
             {path:'comments', element:<CommentsPage/>},
-            {path:'complex', element:<Complex/>}
+            {path:'complex/:id', element:<ComplexPage/>}
         ]
     }
 ])
