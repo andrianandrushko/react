@@ -3,7 +3,7 @@ import type {IComments} from "./IComments.ts";
 import type {IUsers} from "./IUsers.ts";
 
 export interface IComplex {
-    users: IUsers
+    users: IUsers[]
     posts:IPosts[]
     comments:IComments[]
 }
