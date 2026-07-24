@@ -1,4 +1,5 @@
 import {useDispatch} from "react-redux";
-import {store} from "../../store/store.tsx";
+import {store} from "../../slices/store.tsx";
 
-export const useAppDispatchComments = useDispatch.withTypes<typeof store.dispatch>();
+
+export const useAppDispatchComments = useDispatch.withTypes<typeof store.dispatch>()
