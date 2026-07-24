@@ -1,9 +1,9 @@
-import '/App.css'
+import CommentsPage from "./Pages/CommentsPage.tsx";
 
 const App = () => {
     return (
         <div>
-
+        <CommentsPage/>
         </div>
     );
 };

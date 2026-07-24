@@ -14,7 +14,7 @@ const CommentsPage = () => {
             {!loadState && <div>loading</div>}
             {
                 comments.map(comment =>(
-                    <div className="flex gap-10" key={comment.id}>
+                    <div className={'commit'} key={comment.id}>
                         <p>id:{comment.id}</p>
                         <p>name:{comment.name}</p>
                         <p>email:{comment.email}</p>
