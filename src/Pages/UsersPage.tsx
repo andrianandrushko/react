@@ -14,7 +14,7 @@ const UsersPage = () => {
             {!loadState && <div>loading</div>}
             {
                 users.map(user =>(
-                    <div key={user.id}>
+                    <div className={'user'} key={user.id}>
                         <p>id:{user.id}</p>
                         <p>name:{user.name}</p>
                         <p>username:{user.username}</p>

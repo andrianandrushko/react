@@ -14,7 +14,7 @@ const PostsPage = () => {
             {!loadState && <div>loading</div>}
             {
                 posts.map(post=>(
-                    <div key={post.id}>
+                    <div className={'post'} key={post.id}>
                         <p>userId:{post.userId}</p>
                         <p>id:{post.id}</p>
                         <p>title:{post.title}</p>

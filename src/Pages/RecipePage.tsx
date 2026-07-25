@@ -15,7 +15,7 @@ const RecipePage = () => {
             {!loadState && <div>loading</div>}
             {
                 recipes.map((recipe => (
-                    <div key={recipe.id}>
+                    <div className={'recipe'} key={recipe.id}>
                         <p>id:{recipe.id}</p>
                         <p>name:{recipe.name}</p>
                         <p>ingredients:{recipe.ingredients}</p>
