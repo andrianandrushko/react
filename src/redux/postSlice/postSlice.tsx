@@ -37,7 +37,9 @@ export const postSlice = createSlice({
     // початковий стан об'єкта
     initialState:initialState,
     reducers:{
-
+        changeLoadState: (state,action:PayloadAction<boolean>) => {
+            state.loadState = action.payload
+        }
     },
     // обробка асинхронних станів завантаження постів
     extraReducers:builder => {
