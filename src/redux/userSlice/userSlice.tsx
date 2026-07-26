@@ -16,7 +16,7 @@ const loadUsers = createAsyncThunk(
     // другий аргумент створуює асинхрону колбек функцію
     async(_, thunkAPI) => {
         try {
-            // отримуємо користувачів з API
+            // запит API користувачів
             const users = await fetch('https://jsonplaceholder.typicode.com/users')
                 .then(res => res.json())
 
