@@ -1,5 +1,6 @@
 import type {IUsers} from "../../models/IUsers.ts";
-import {createAsyncThunk, createSlice, type PayloadAction} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, isFulfilled, isRejected, type PayloadAction} from "@reduxjs/toolkit";
+import {commentSliceActions} from "../commentSlice/commentSlice.tsx";
 // створює тип який описує користувачів
 type userSliceType = {
     users:IUsers[],
@@ -13,12 +14,13 @@ const initialState: userSliceType = {users:[], user:null, loadState:false}
 const loadUsers = createAsyncThunk(
     // функція приймає два аргументи перший назва, назва самої функції
     'userSlice/loadUsers',
-    // другий аргумент створуює асинхрону колбек функцію
+    // другий аргумент створює асинхрону колбек функцію
     async(_, thunkAPI) => {
         try {
             // запит API користувачів
             const users = await fetch('https://jsonplaceholder.typicode.com/users')
                 .then(res => res.json())
+            thunkAPI.dispatch(commentSliceActions.changeLoadState(true))
 
             // повертаємо користувачів через аргумент thunkAPI
             return thunkAPI.fulfillWithValue(users)
@@ -39,7 +41,9 @@ export const userSlice = createSlice({
     // початковий стан об'єкта
     initialState:initialState,
     reducers:{
-
+        changeLoadState: (state,action:PayloadAction<boolean>) => {
+            state.loadState = action.payload
+        }
     },
     // обробка асинхронних станів завантаження користувачів
     extraReducers:builder => {
@@ -50,6 +54,12 @@ export const userSlice = createSlice({
             .addCase(loadUsers.rejected,(state, action)=>{
                 console.log(state)
                 console.log(action)
+            })
+            .addMatcher(isFulfilled(loadUsers),(state)=>{
+                state.loadState = true
+            })
+            .addMatcher(isRejected(loadUsers),(state)=>{
+                console.log(state)
             })
     }
 })

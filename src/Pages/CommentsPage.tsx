@@ -4,8 +4,10 @@ import {useEffect} from "react";
 import {commentSliceActions} from "../redux/commentSlice/commentSlice.tsx";
 
 const CommentsPage = () => {
+    // беремо два власні хуки для коментарів
     const {comments, loadState} = useAppSelectorComments(({commentSlice}) => commentSlice)
     const dispatch = useAppDispatchComments()
+    // завантаження коритувачів при першому рендері
     useEffect(() => {
         dispatch(commentSliceActions.loadComments())
     }, [])
@@ -13,6 +15,7 @@ const CommentsPage = () => {
         <div>
             {!loadState && <div>loading</div>}
             {
+                // отримуємо пости за допомогою функції map
                 comments.map(comment =>(
                     <div className={'commit'} key={comment.id}>
                         <p>id:{comment.id}</p>
