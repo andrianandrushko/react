@@ -1,5 +1,5 @@
 import type {IPosts} from "../../models/IPosts.ts";
-import {createAsyncThunk, createSlice, type PayloadAction} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, isFulfilled, isRejected, type PayloadAction} from "@reduxjs/toolkit";
 // стврюємо тип який описує пости
 type postSliceType = {
     posts:IPosts[],
@@ -50,6 +50,12 @@ export const postSlice = createSlice({
             .addCase(loadPosts.rejected,(state, action)=>{
                 console.log(state)
                 console.log(action)
+            })
+            .addMatcher(isFulfilled(loadPosts),(state)=>{
+                state.loadState = true
+            })
+            .addMatcher(isRejected(loadPosts),(state)=>{
+                console.log(state)
             })
     }
 })
