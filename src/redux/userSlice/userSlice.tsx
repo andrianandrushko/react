@@ -10,7 +10,7 @@ type userSliceType = {
 // об'єкт який характеризує початковий стан
 const initialState: userSliceType = {users:[], user:null, loadState:false}
 
-// створення змінної за рахунок функціїї createAsyncThunk
+// створення змінної за рахунок функції createAsyncThunk
 const loadUsers = createAsyncThunk(
     // функція приймає два аргументи перший назва, назва самої функції
     'userSlice/loadUsers',
