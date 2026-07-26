@@ -4,8 +4,10 @@ import {useEffect} from "react";
 import {userSliceActions} from "../redux/userSlice/userSlice.tsx";
 
 const UsersPage = () => {
+    // беремо власні два хуки для користувачів
     const {users,loadState}  = useAppSelectorUsers(({userSlice})=>userSlice)
     const dispatch = useAppDispatchUsers()
+    // завантаження коритувачів при першому рендері
     useEffect(() => {
         dispatch(userSliceActions.loadUsers())
     }, []);
@@ -13,6 +15,7 @@ const UsersPage = () => {
         <div>
             {!loadState && <div>loading</div>}
             {
+                // виводимо користувачів на сторінку за допомогою функції map
                 users.map(user =>(
                     <div className={'user'} key={user.id}>
                         <p>id:{user.id}</p>

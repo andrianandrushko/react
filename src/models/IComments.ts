@@ -1,3 +1,4 @@
+// інтерфейс який описує коментарі
 export interface IComments {
     id: number,
     name: string,

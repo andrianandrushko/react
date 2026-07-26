@@ -5,7 +5,7 @@ import UsersPage from "../Pages/UsersPage.tsx";
 import PostsPage from "../Pages/PostsPage.tsx";
 import RecipePage from "../Pages/RecipePage.tsx";
 
-
+// маршрути застосунку
 export const router = createBrowserRouter([
     {
         path: "/", element:<MainLayout/>, children:[

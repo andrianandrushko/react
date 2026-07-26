@@ -1,3 +1,4 @@
+// інтерфейс який описує користувачів
 export interface IUsers{
     id: number ,
     name: string

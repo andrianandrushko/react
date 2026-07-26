@@ -2,6 +2,7 @@ import {Link} from "react-router";
 
 const Menu = () => {
     return (
+        // список посилань на сторінки
         <div>
             <ul>
                 <li><Link to={'users'}>users</Link></li>

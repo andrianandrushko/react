@@ -4,7 +4,7 @@ import {userSlice} from "../redux/userSlice/userSlice.tsx";
 import {postSlice} from "../redux/postSlice/postSlice.tsx";
 import {recipeSlice} from "../redux/recipeSlice/recipeSlice.tsx";
 
-
+// ініціалізація сховища застосунку
 export const store = configureStore({
     reducer: {
         userSlice: userSlice.reducer,
