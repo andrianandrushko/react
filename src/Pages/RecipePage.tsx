@@ -5,8 +5,10 @@ import {recipeSliceActions} from "../redux/recipeSlice/recipeSlice.tsx";
 
 
 const RecipePage = () => {
+    // беремо власні хуки для рецептів
     const {recipes, loadState} = useAppSelectorRecipe(({recipeSlice}) => recipeSlice);
     const dispatch = useAppDispatchPosts();
+    // завантаження коритувачів при першому рендері
     useEffect(() => {
         dispatch(recipeSliceActions.loadRecipe())
     }, []);
@@ -14,6 +16,7 @@ const RecipePage = () => {
         <div>
             {!loadState && <div>loading</div>}
             {
+                // отримуємо рецепти за допомогою функції map
                 recipes.map((recipe => (
                     <div className={'recipe'} key={recipe.id}>
                         <p>id:{recipe.id}</p>
