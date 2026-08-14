@@ -5,6 +5,7 @@ import {CreateCar} from "../services/api.service.ts";
 
 
 interface IFormProps{
+    id: number
     brand: string,
     price: number,
     year: number,
